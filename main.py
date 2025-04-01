@@ -1,16 +1,35 @@
-# This is a sample Python script.
+myName = "james"
+herName = "jennifer"
+print(".title()")
+print(myName.title())
+print(".upper()")
+print(myName.upper())
+print(".lower()")
+print(myName.lower())
+print(".casefold()")
+print(myName.casefold())
+print(".capitalize()")
+print(myName.capitalize())
+print(".isalnum()")
+print(myName.isalnum())
+ourName = myName.title() + " and " + herName.title()
+print(ourName)
+ourNameAsString = f"{myName.title()} and {herName.title()}"
+print(ourNameAsString)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+james = "james"
+jennifer = "jennifer"
+cagle = "cagle"
 
+print("Name:\t" + james.title() + " " + cagle.title()+"\nName:\t" + jennifer.title() + " " + cagle.title())
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+favoriteFood = '  steak  '
+print('***'+favoriteFood+'***')
+print('***'+favoriteFood.rstrip()+'***')
+print('***'+favoriteFood.lstrip()+'***')
+print('***'+favoriteFood.lstrip().rstrip()+'***')
+print('***'+favoriteFood.strip()+'***')
+print('***'+favoriteFood.lstrip().rstrip().capitalize()+'***')
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+message = "One of Python's strengths is its diverse community"
+print(message)
