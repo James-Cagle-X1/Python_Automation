@@ -1,35 +1,20 @@
-myName = "james"
-herName = "jennifer"
-print(".title()")
-print(myName.title())
-print(".upper()")
-print(myName.upper())
-print(".lower()")
-print(myName.lower())
-print(".casefold()")
-print(myName.casefold())
-print(".capitalize()")
-print(myName.capitalize())
-print(".isalnum()")
-print(myName.isalnum())
-ourName = myName.title() + " and " + herName.title()
-print(ourName)
-ourNameAsString = f"{myName.title()} and {herName.title()}"
-print(ourNameAsString)
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
-james = "james"
-jennifer = "jennifer"
-cagle = "cagle"
+# Set up Chrome options (optional)
+chrome_options = Options()
+chrome_options.add_argument("--start-maximized")  # Open browser in maximized mode
 
-print("Name:\t" + james.title() + " " + cagle.title()+"\nName:\t" + jennifer.title() + " " + cagle.title())
+# Use webdriver-manager to automatically download and manage ChromeDriver
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
-favoriteFood = '  steak  '
-print('***'+favoriteFood+'***')
-print('***'+favoriteFood.rstrip()+'***')
-print('***'+favoriteFood.lstrip()+'***')
-print('***'+favoriteFood.lstrip().rstrip()+'***')
-print('***'+favoriteFood.strip()+'***')
-print('***'+favoriteFood.lstrip().rstrip().capitalize()+'***')
+# Navigate to google.com
+driver.get("https://www.google.com")
 
-message = "One of Python's strengths is its diverse community"
-print(message)
+# Optional: Close the browser after a delay
+time.sleep(60)
+driver.quit()
